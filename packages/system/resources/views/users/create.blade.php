@@ -417,6 +417,17 @@
 <div class="relative flex items-top min-h-screen bg-gray-100 container dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
     <div class="col-12 container">
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <p>Corrige los siguientes errores:</p>
+                <ul>
+                    @foreach ($errors->all() as $message)
+                        <li>{{ $message }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <a href="{{ route('users.index') }}" class="btn btn-primary "> Usuarios </a>
         <br/>
         <br/>

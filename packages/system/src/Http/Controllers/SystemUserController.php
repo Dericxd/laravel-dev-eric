@@ -2,6 +2,7 @@
 
 namespace Packages\System\Http\Controllers;
 
+use Packages\System\Http\Requests\SystemUserRequest;
 use Packages\System\Models\SystemUser;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class SystemUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SystemUserRequest $request)
     {
 //        dd($request);
         $user = new SystemUser;

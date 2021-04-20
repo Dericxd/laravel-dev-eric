@@ -35,12 +35,4 @@ Route::prefix('system')->group(function (){
     Route::get('/', function (){
         return view('test::index');
     });
-});
-
-//Route::group(['middleware' => ['auth', 'verified']], function () {
-//    Route::resource('users', SystemUserController::class)->name('users');
-//    Route::resource('articles', SystemArticleController::class)->name('articles');
-//    Route::get('/', function (){
-//        return view('index');
-//    });
-//});
+})->middleware('web');
