@@ -35,4 +35,4 @@ Route::prefix('system')->group(function (){
     Route::get('/', function (){
         return view('test::index');
     });
-})->middleware('web');
+});
